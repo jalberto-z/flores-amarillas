@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Flores Amarillas 💛</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:Georgia,serif}
+body{background:linear-gradient(180deg,#8ed6b4 0%,#58b99a 55%,#329277 100%);color:#fff}
+.scene{position:relative;width:100%;height:100%;overflow:hidden;text-align:center}
+.title{position:absolute;top:5%;left:50%;transform:translateX(-50%);width:94%;font-size:clamp(25px,7vw,42px);font-weight:bold;text-shadow:0 3px 8px #276c58;z-index:20}
+.subtitle{position:absolute;top:13%;left:50%;transform:translateX(-50%);width:90%;font-size:clamp(17px,4.5vw,25px);text-shadow:0 2px 5px #276c58;z-index:20}
+.love{position:absolute;top:20%;left:50%;transform:translateX(-50%);font-size:clamp(25px,7vw,38px);font-weight:bold;color:#fff8a8;text-shadow:0 2px 8px #7c6b20;z-index:20;animation:pulse 2s infinite}
+@keyframes pulse{50%{transform:translateX(-50%) scale(1.07)}}
+.ground{position:absolute;bottom:-7%;left:-10%;width:120%;height:25%;border-radius:50% 50% 0 0;background:#26785e;opacity:.8}
+.bouquet{position:absolute;left:50%;bottom:8%;width:230px;height:390px;transform:translateX(-50%);z-index:8}
+.stem{position:absolute;bottom:65px;left:50%;width:7px;height:0;background:#397b3e;border-radius:8px;transform-origin:bottom;animation:grow 2.3s forwards}
+.s1{transform:translateX(-50%) rotate(-18deg);animation-delay:.2s}.s2{transform:translateX(-50%) rotate(-8deg);animation-delay:.45s}.s3{transform:translateX(-50%) rotate(8deg);animation-delay:.7s}.s4{transform:translateX(-50%) rotate(18deg);animation-delay:.9s}.s5{transform:translateX(-50%) rotate(0);animation-delay:1.1s}
+@keyframes grow{to{height:245px}}
+.flower{position:absolute;width:62px;height:62px;left:50%;top:70px;transform:translateX(-50%) scale(0);animation:bloom 1.3s forwards;animation-delay:2.1s;filter:drop-shadow(0 4px 4px rgba(0,0,0,.2))}
+.f1{left:24%;top:102px;animation-delay:1.7s}.f2{left:40%;top:50px;animation-delay:1.9s}.f3{left:60%;top:43px;animation-delay:2.1s}.f4{left:77%;top:103px;animation-delay:2.3s}.f5{left:50%;top:2px;animation-delay:2.5s}
+@keyframes bloom{to{transform:translateX(-50%) scale(1)}}
+.petal{position:absolute;left:50%;top:50%;width:27px;height:43px;background:#ffd83d;border-radius:60% 60% 45% 45%;transform-origin:50% 100%}
+.petal:nth-child(1){transform:translate(-50%,-100%) rotate(0)}.petal:nth-child(2){transform:translate(-50%,-100%) rotate(45deg)}.petal:nth-child(3){transform:translate(-50%,-100%) rotate(90deg)}.petal:nth-child(4){transform:translate(-50%,-100%) rotate(135deg)}.petal:nth-child(5){transform:translate(-50%,-100%) rotate(180deg)}.petal:nth-child(6){transform:translate(-50%,-100%) rotate(225deg)}.petal:nth-child(7){transform:translate(-50%,-100%) rotate(270deg)}.petal:nth-child(8){transform:translate(-50%,-100%) rotate(315deg)}
+.center{position:absolute;left:50%;top:50%;width:25px;height:25px;border-radius:50%;background:#8b5a16;transform:translate(-50%,-50%);box-shadow:inset 0 2px 5px #50320d}
+.leaf{position:absolute;width:48px;height:23px;background:#4d9a4b;border-radius:100% 0 100% 0;opacity:0;animation:leaf 1s forwards;animation-delay:2.2s}
+.l1{left:25px;bottom:125px;transform:rotate(25deg)}.l2{right:25px;bottom:155px;transform:scaleX(-1) rotate(25deg);animation-delay:2.5s}.l3{left:55px;bottom:185px;transform:rotate(25deg);animation-delay:2.7s}.l4{right:48px;bottom:205px;transform:scaleX(-1) rotate(25deg);animation-delay:2.9s}
+@keyframes leaf{to{opacity:1}}
+.wrap{position:absolute;bottom:0;left:50%;width:180px;height:125px;transform:translateX(-50%);background:linear-gradient(145deg,#fff8df,#e9d6a0);clip-path:polygon(15% 0,85% 0,100% 100%,0 100%);z-index:10;box-shadow:0 5px 12px rgba(0,0,0,.2)}
+.wrap:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(75deg,transparent 0 18px,rgba(255,255,255,.45) 19px 21px)}
+.ribbon{position:absolute;z-index:12;bottom:24px;left:50%;transform:translateX(-50%);width:65px;height:45px}.ribbon:before,.ribbon:after{content:"";position:absolute;width:30px;height:35px;border:5px solid #d94848;border-radius:50% 50% 50% 10%}.ribbon:before{left:0;transform:rotate(25deg)}.ribbon:after{right:0;transform:scaleX(-1) rotate(25deg)}.knot{position:absolute;left:50%;top:11px;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:#d94848}
+.butterfly{position:absolute;z-index:15;font-size:27px;animation:fly 8s ease-in-out infinite}.b1{left:7%;top:34%;animation-delay:0s}.b2{right:8%;top:43%;animation-delay:2s}.b3{left:14%;top:63%;animation-delay:4s}
+@keyframes fly{0%,100%{transform:translate(0,0) rotate(-8deg)}50%{transform:translate(35px,-45px) rotate(10deg)}}
+.heart{position:absolute;bottom:-30px;font-size:20px;z-index:14;animation:heartUp 6s linear forwards;opacity:.9}.h1{left:18%;animation-delay:1s}.h2{left:72%;animation-delay:3s}.h3{left:45%;animation-delay:5s}.h4{left:83%;animation-delay:7s}
+@keyframes heartUp{0%{transform:translateY(0) scale(.7);opacity:0}15%{opacity:1}100%{transform:translateY(-100vh) scale(1.2) rotate(20deg);opacity:0}}
+.controls{position:absolute;bottom:3%;left:50%;transform:translateX(-50%);z-index:30;display:flex;gap:10px;width:95%;justify-content:center}
+button{border:0;border-radius:999px;padding:12px 17px;background:rgba(255,255,255,.92);color:#397b5e;font-size:16px;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,.2)}button:active{transform:scale(.96)}
+.popup{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:100;padding:25px}.card{background:#fffdf0;color:#5d5439;max-width:390px;width:100%;padding:30px 24px;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,.35);animation:pop .35s ease}.card h2{color:#d19d16;margin-top:0;font-size:28px}.card p{font-size:19px;line-height:1.6}.close{background:#e7b72e;color:#fff;margin-top:10px}
+@keyframes pop{from{transform:scale(.75);opacity:0}to{transform:scale(1);opacity:1}}
+.paused *{animation-play-state:paused!important}
+@media(max-height:650px){.bouquet{bottom:6%;transform:translateX(-50%) scale(.82)}.title{top:2%}.subtitle{top:10%}.love{top:16%}.controls{bottom:1%}}
+</style>
+</head>
+<body>
+<div class="scene" id="scene">
+  <div class="title">Feliz Día De Las Flores Amarillas 🌻</div>
+  <div class="subtitle">Un ramo especial para ti 💛</div>
+  <div class="love">Te amo mucho 💛</div>
+  <div class="ground"></div>
+  <div class="butterfly b1">🦋</div><div class="butterfly b2">🦋</div><div class="butterfly b3">🦋</div>
+  <div class="heart h1">💛</div><div class="heart h2">💛</div><div class="heart h3">💕</div><div class="heart h4">💛</div>
+  <div class="bouquet">
+    <div class="stem s1"></div><div class="stem s2"></div><div class="stem s3"></div><div class="stem s4"></div><div class="stem s5"></div>
+    <div class="leaf l1"></div><div class="leaf l2"></div><div class="leaf l3"></div><div class="leaf l4"></div>
+    <div class="flower f1"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><b class="center"></b></div>
+    <div class="flower f2"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><b class="center"></b></div>
+    <div class="flower f3"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><b class="center"></b></div>
+    <div class="flower f4"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><b class="center"></b></div>
+    <div class="flower f5"><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><b class="center"></b></div>
+    <div class="wrap"></div><div class="ribbon"><span class="knot"></span></div>
+  </div>
+  <div class="controls">
+    <button id="pauseBtn">⏸ Pausar animación</button>
+    <button id="mailBtn">💌 Abrir mensaje</button>
+    <button id="musicBtn">🎵 Música</button>
+  </div>
+</div>
+
+<audio id="musica" loop preload="auto"><source src="Flores_Aamarillas_Floricienta.mp3" type="audio/mpeg"></audio>
+
+<div class="popup" id="popup"><div class="card"><h2>Para ti 💛</h2><p>Te amo mucho. 💛<br>Espero que este pequeño ramo te saque una sonrisa y te recuerde lo especial que eres para mí. 🌻</p><button class="close" id="closeBtn">Cerrar 💛</button></div></div>
+
+<script>
+const scene=document.getElementById('scene'), pauseBtn=document.getElementById('pauseBtn'), popup=document.getElementById('popup'), mailBtn=document.getElementById('mailBtn'), closeBtn=document.getElementById('closeBtn'), musicBtn=document.getElementById('musicBtn'), musica=document.getElementById('musica');
+let paused=false;
+pauseBtn.addEventListener('click',()=>{paused=!paused;scene.classList.toggle('paused',paused);pauseBtn.textContent=paused?'▶ Continuar animación':'⏸ Pausar animación'});
+function playMusic(){musica.play().then(()=>{musicBtn.textContent='🔊 Pausar música'}).catch(()=>{musicBtn.textContent='🎵 Tocar música'});}
+mailBtn.addEventListener('click',()=>{popup.style.display='flex';playMusic();});
+closeBtn.addEventListener('click',()=>popup.style.display='none');
+popup.addEventListener('click',e=>{if(e.target===popup)popup.style.display='none'});
+musicBtn.addEventListener('click',()=>{if(musica.paused)playMusic();else{musica.pause();musicBtn.textContent='🎵 Música'}});
+musica.addEventListener('ended',()=>musicBtn.textContent='🎵 Música');
+</script>
+</body>
+</html>
